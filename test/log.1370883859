@@ -1,0 +1,149 @@
+# Logfile created on 2013-06-10 13:04:19 -0400 by logger.rb/v1.2.7
+2013-6-10 13:4:19 [INFO] 
+
+  ts: Running test suite 'smvgear'
+
+2013-6-10 13:4:20 [DEBUG] 
+
+  ts: Read config 'smvgear':
+  ts: group_ifort: 
+  ts:   ifort
+
+2013-6-10 13:4:20 [DEBUG] 
+
+  Deleted existing 'builds'
+
+2013-6-10 13:4:20 [DEBUG] 
+
+  Created empty 'builds'
+
+2013-6-10 13:4:20 [DEBUG] 
+
+  Run ifort: Read config 'ifort':
+  Run ifort: baseline: 'ifort'
+  Run ifort: build: 'ifort'
+  Run ifort: extends: 'common'
+
+2013-6-10 13:4:20 [DEBUG] 
+
+  Run ifort: Read config 'common':
+  Run ifort: profile: 'SMVgear'
+
+2013-6-10 13:4:20 [DEBUG] 
+
+  Run ifort: Read config 'ifort':
+  Run ifort: extends: 'common'
+  Run ifort: makefile_gearproc: 'GNUmakefile.ifort'
+  Run ifort: makefile_top: 'GNUmakefile.ifort'
+
+2013-6-10 13:4:20 [DEBUG] 
+
+  Run ifort: Read config 'common':
+  Run ifort: bindir: 'bin'
+
+2013-6-10 13:4:20 [INFO] 
+
+  Run ifort: Build ifort started
+
+2013-6-10 13:4:20 [DEBUG] 
+
+  Run ifort: * Output from build ifort prep:
+  Run ifort: Copied /Users/mrdamon/Desktop/SMVgear/src -> /Users/mrdamon/Desktop/SMVgear/test/builds/ifort
+  Run ifort: Linked top-level makefile: /Users/mrdamon/Desktop/SMVgear/test/builds/ifort/GNUmakefile -> GNUmakefile.ifort
+  Run ifort: Linked GearProc makefile: /Users/mrdamon/Desktop/SMVgear/test/builds/ifort/GearProc/GNUmakefile -> GNUmakefile.ifort
+
+2013-6-10 13:4:45 [DEBUG] 
+
+  Run ifort: * Output from build ifort:
+  Run ifort: * Output from cd /Users/mrdamon/Desktop/SMVgear/test/builds/ifort && make (status code=0):
+  Run ifort: ---- 8< ----
+  Run ifort: make -C GearProc all
+  Run ifort: ifort -O3 -vec-report0 -ftz -align all -fno-alias -convert big_endian -fPIC -fpe0 -fp-model precise  -align dcommons -check bounds -check uninit -DDOREORD=0 -DBLOCKSIZE=32 -c gearproc.F90
+  Run ifort: ifort -O3 -vec-report0 -ftz -align all -fno-alias -convert big_endian -fPIC -fpe0 -fp-model precise  -align dcommons -check bounds -check uninit -DDOREORD=0 -DBLOCKSIZE=32  -o GearProc.exe gearproc.o
+  Run ifort: ifort -O3 -vec-report0 -ftz -align all -fno-alias -convert big_endian -fPIC -fpe0 -fp-model precise  -align dcommons -check bounds -check uninit -DDOREORD=0 -DBLOCKSIZE=32 -I/Users/mrdamon/git/pfunit_install//include -I/Users/mrdamon/git/pfunit_install//mod -I. -c Smv2Chem2_mod.F90
+  Run ifort: ifort -O3 -vec-report0 -ftz -align all -fno-alias -convert big_endian -fPIC -fpe0 -fp-model precise  -align dcommons -check bounds -check uninit -DDOREORD=0 -DBLOCKSIZE=32 -I/Users/mrdamon/git/pfunit_install//include -I/Users/mrdamon/git/pfunit_install//mod -I. -c Smv2Chem1_mod.F90
+  Run ifort: ifort -O3 -vec-report0 -ftz -align all -fno-alias -convert big_endian -fPIC -fpe0 -fp-model precise  -align dcommons -check bounds -check uninit -DDOREORD=0 -DBLOCKSIZE=32 -I/Users/mrdamon/git/pfunit_install//include -I/Users/mrdamon/git/pfunit_install//mod -I. -c ChemTable_mod.F90
+  Run ifort: ifort -O3 -vec-report0 -ftz -align all -fno-alias -convert big_endian -fPIC -fpe0 -fp-model precise  -align dcommons -check bounds -check uninit -DDOREORD=0 -DBLOCKSIZE=32 -I/Users/mrdamon/git/pfunit_install//include -I/Users/mrdamon/git/pfunit_install//mod -I. -c GmiPrintError_mod.F90
+  Run ifort: ifort -O3 -vec-report0 -ftz -align all -fno-alias -convert big_endian -fPIC -fpe0 -fp-model precise  -align dcommons -check bounds -check uninit -DDOREORD=0 -DBLOCKSIZE=32 -I/Users/mrdamon/git/pfunit_install//include -I/Users/mrdamon/git/pfunit_install//mod -I. -c GmiManager_mod.F90
+  Run ifort: GmiManager_mod.F90(295): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+  Run ifort:       950    format ('Smvgear:  delt      = ', 1pe9.3, /,  '          timremain = ', 1pe9.3, /,  &
+  Run ifort: --------------------------------------------------^
+  Run ifort: GmiManager_mod.F90(295): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+  Run ifort:       950    format ('Smvgear:  delt      = ', 1pe9.3, /,  '          timremain = ', 1pe9.3, /,  &
+  Run ifort: ----------------------------------------------------------------------------------------^
+  Run ifort: GmiManager_mod.F90(296): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+  Run ifort:          &          '          failureFraction      = ', 1pe9.3, /,  '          errmax    = ', 1pe9.3)
+  Run ifort: ------------------------------------------------------------^
+  Run ifort: GmiManager_mod.F90(296): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+  Run ifort:          &          '          failureFraction      = ', 1pe9.3, /,  '          errmax    = ', 1pe9.3)
+  Run ifort: --------------------------------------------------------------------------------------------------^
+  Run ifort: ifort -O3 -vec-report0 -ftz -align all -fno-alias -convert big_endian -fPIC -fpe0 -fp-model precise  -align dcommons -check bounds -check uninit -DDOREORD=0 -DBLOCKSIZE=32 -I/Users/mrdamon/git/pfunit_install//include -I/Users/mrdamon/git/pfunit_install//mod -I. -c GmiMechanism_mod.F90
+  Run ifort: ifort -O3 -vec-report0 -ftz -align all -fno-alias -convert big_endian -fPIC -fpe0 -fp-model precise  -align dcommons -check bounds -check uninit -DDOREORD=0 -DBLOCKSIZE=32 -I/Users/mrdamon/git/pfunit_install//include -I/Users/mrdamon/git/pfunit_install//mod -I. -c GmiSparseMatrix_mod.F90
+  Run ifort: ifort -O3 -vec-report0 -ftz -align all -fno-alias -convert big_endian -fPIC -fpe0 -fp-model precise  -align dcommons -check bounds -check uninit -DDOREORD=0 -DBLOCKSIZE=32 -I/Users/mrdamon/git/pfunit_install//include -I/Users/mrdamon/git/pfunit_install//mod -I. -c SmvChem_mod.F90
+  Run ifort: ifort -O3 -vec-report0 -ftz -align all -fno-alias -convert big_endian -fPIC -fpe0 -fp-model precise  -align dcommons -check bounds -check uninit -DDOREORD=0 -DBLOCKSIZE=32 -I/Users/mrdamon/git/pfunit_install//include -I/Users/mrdamon/git/pfunit_install//mod -I. -c timing_mod.F90
+  Run ifort: ifort -O3 -vec-report0 -ftz -align all -fno-alias -convert big_endian -fPIC -fpe0 -fp-model precise  -align dcommons -check bounds -check uninit -DDOREORD=0 -DBLOCKSIZE=32 -I/Users/mrdamon/git/pfunit_install//include -I/Users/mrdamon/git/pfunit_install//mod -I. -c physproc.F90
+  Run ifort: ifort -O3 -vec-report0 -ftz -align all -fno-alias -convert big_endian -fPIC -fpe0 -fp-model precise  -align dcommons -check bounds -check uninit -DDOREORD=0 -DBLOCKSIZE=32 -I/Users/mrdamon/git/pfunit_install//include -I/Users/mrdamon/git/pfunit_install//mod -I. -c setkin_ratecalc.F90
+  Run ifort: ifort -O3 -vec-report0 -ftz -align all -fno-alias -convert big_endian -fPIC -fpe0 -fp-model precise  -align dcommons -check bounds -check uninit -DDOREORD=0 -DBLOCKSIZE=32 -I/Users/mrdamon/git/pfunit_install//include -I/Users/mrdamon/git/pfunit_install//mod -I. -c smv2chem_diag.F90
+  Run ifort: ifort -O3 -vec-report0 -ftz -align all -fno-alias -convert big_endian -fPIC -fpe0 -fp-model precise  -align dcommons -check bounds -check uninit -DDOREORD=0 -DBLOCKSIZE=32 -I/Users/mrdamon/git/pfunit_install//include -I/Users/mrdamon/git/pfunit_install//mod -I. -c smv2chem_solver.F90
+  Run ifort: ifort -O3 -vec-report0 -ftz -align all -fno-alias -convert big_endian -fPIC -fpe0 -fp-model precise  -align dcommons -check bounds -check uninit -DDOREORD=0 -DBLOCKSIZE=32 -I/Users/mrdamon/git/pfunit_install//include -I/Users/mrdamon/git/pfunit_install//mod -I. -c smvgear.F90
+  Run ifort: ifort -O3 -vec-report0 -ftz -align all -fno-alias -convert big_endian -fPIC -fpe0 -fp-model precise  -align dcommons -check bounds -check uninit -DDOREORD=0 -DBLOCKSIZE=32 -I/Users/mrdamon/git/pfunit_install//include -I/Users/mrdamon/git/pfunit_install//mod -I. -c tests.F90
+  Run ifort: ifort -O3 -vec-report0 -ftz -align all -fno-alias -convert big_endian -fPIC -fpe0 -fp-model precise  -align dcommons -check bounds -check uninit -DDOREORD=0 -DBLOCKSIZE=32 -I/Users/mrdamon/git/pfunit_install//include -I/Users/mrdamon/git/pfunit_install//mod -I. -o Do_Smv2_Solver.exe ChemTable_mod.o GmiManager_mod.o GmiMechanism_mod.o GmiPrintError_mod.o GmiSparseMatrix_mod.o Smv2Chem1_mod.o Smv2Chem2_mod.o SmvChem_mod.o physproc.o setkin_ratecalc.o smv2chem_diag.o smv2chem_solver.o smvgear.o tests.o timing_mod.o -L/Users/mrdamon/git/pfunit_install//lib -lpfunit
+  Run ifort: ---- >8 ----
+
+2013-6-10 13:4:45 [INFO] 
+
+  Run ifort: Build ifort completed
+
+2013-6-10 13:4:45 [DEBUG] 
+
+  Run ifort: Moved Do_Smv2_Solver.exe -> /Users/mrdamon/Desktop/SMVgear/test/builds/ifort/bin
+  Run ifort: Moved GearProc/GearProc.exe -> /Users/mrdamon/Desktop/SMVgear/test/builds/ifort/bin
+
+2013-6-10 13:4:45 [DEBUG] 
+
+  Run ifort: * Preparing data for all test-suite runs...
+  Run ifort: No data-prep needed.
+
+2013-6-10 13:4:45 [INFO] 
+
+  Run ifort: Started
+
+2013-6-10 13:4:45 [DEBUG] 
+
+  Run ifort: * Output from run prep:
+  Run ifort: Copied /Users/mrdamon/Desktop/SMVgear/test/builds/ifort/bin -> /Users/mrdamon/Desktop/SMVgear/test/runs/ifort.1370883859
+
+2013-6-10 13:5:15 [INFO] 
+
+  Run ifort: Comparing to baseline ifort
+
+2013-6-10 13:5:17 [DEBUG] 
+
+  Run ifort: * Output from run:
+  Run ifort: * Output from cd /Users/mrdamon/Desktop/SMVgear/test/runs/ifort.1370883859/bin && ./Do_Smv2_Solver.exe > stdout (status code=0):
+  Run ifort: ---- 8< ----
+  Run ifort: ---- >8 ----
+  Run ifort: Comparing ifort to baseline ifort
+  Run ifort: Comparing physproc_exit.proc0017: OK (ifort vs baseline ifort)
+  Run ifort: Comparing smv2chem1_exit.proc0017: OK (ifort vs baseline ifort)
+  Run ifort: Comparing smv2chem2_exit.proc0017: OK (ifort vs baseline ifort)
+  Run ifort: Comparing ifort to baseline ifort: OK
+
+2013-6-10 13:5:17 [INFO] 
+
+  Run ifort: Baseline comparison OK
+
+2013-6-10 13:5:17 [DEBUG] 
+
+
+2013-6-10 13:5:17 [INFO] 
+
+  Run ifort: Completed
+
+2013-6-10 13:5:35 [DEBUG] 
+
+
+2013-6-10 13:5:35 [INFO] 
+
+  ts: ALL TESTS PASSED
+

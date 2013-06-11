@@ -1,0 +1,70 @@
+# Logfile created on 2013-06-10 13:02:23 -0400 by logger.rb/v1.2.7
+2013-6-10 13:2:23 [INFO] 
+
+  ts: Running test suite 'smvgear'
+
+2013-6-10 13:2:23 [DEBUG] 
+
+  ts: Read config 'smvgear':
+  ts: group_gfortran: 
+  ts:   gfortran
+  ts: group_ifort: 
+  ts:   ifort
+
+2013-6-10 13:2:23 [DEBUG] 
+
+
+2013-6-10 13:2:23 [FATAL] 
+
+  ts: File /Users/mrdamon/Desktop/SMVgear/test/conf/runs/gfortran not found
+
+2013-6-10 13:2:23 [DEBUG] 
+
+  ts: 
+  ts: * Backtrace:
+  ts: ts.rb:117:in `die'
+  ts: ts.rb:313:in `valid_file'
+  ts: ts.rb:240:in `parse'
+  ts: ts.rb:171:in `loadspec'
+  ts: ts.rb:584:in `avoid_baseline_conflicts'
+  ts: org/jruby/RubyArray.java:1617:in `each'
+  ts: ts.rb:583:in `avoid_baseline_conflicts'
+  ts: org/jruby/RubyHash.java:1332:in `each'
+  ts: ts.rb:582:in `avoid_baseline_conflicts'
+  ts: ts.rb:699:in `dosuite'
+  ts: ts.rb:607:in `baseline'
+  ts: org/jruby/RubyBasicObject.java:1709:in `__send__'
+  ts: org/jruby/RubyKernel.java:2213:in `send'
+  ts: ts.rb:665:in `dispatch'
+  ts: ts.rb:572:in `initialize'
+  ts: ts.rb:923:in `(root)'
+
+2013-6-10 13:2:23 [FATAL] 
+
+  ts: Error parsing YAML from /Users/mrdamon/Desktop/SMVgear/test/conf/runs/gfortran
+
+2013-6-10 13:2:23 [DEBUG] 
+
+  ts: 
+  ts: * Backtrace:
+  ts: ts.rb:117:in `die'
+  ts: ts.rb:313:in `valid_file'
+  ts: ts.rb:240:in `parse'
+  ts: ts.rb:171:in `loadspec'
+  ts: ts.rb:584:in `avoid_baseline_conflicts'
+  ts: org/jruby/RubyArray.java:1617:in `each'
+  ts: ts.rb:583:in `avoid_baseline_conflicts'
+  ts: org/jruby/RubyHash.java:1332:in `each'
+  ts: ts.rb:582:in `avoid_baseline_conflicts'
+  ts: ts.rb:699:in `dosuite'
+  ts: ts.rb:607:in `baseline'
+  ts: org/jruby/RubyBasicObject.java:1709:in `__send__'
+  ts: org/jruby/RubyKernel.java:2213:in `send'
+  ts: ts.rb:665:in `dispatch'
+  ts: ts.rb:572:in `initialize'
+  ts: ts.rb:923:in `(root)'
+
+2013-6-10 13:2:23 [INFO] 
+
+  ts: Test suite 'smvgear' FAILED
+

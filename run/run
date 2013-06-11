@@ -1,0 +1,41 @@
+#!/bin/bash
+
+function fail {
+  msg="$1"
+  test -n "$msg" && echo "$msg"
+  exit 1
+}
+
+function opsafe {
+  test -z "$1" && fail "opsafe: src not specified"
+  test -z "$2" && fail "opsafe: dst not specified"
+  test -z "$3" && fail "opsafe: op not specified"
+  test -r "$1" || fail "Cannot read $1"
+  $3 $1 $2 || fail
+}
+
+function cpsafe {
+  opsafe "$1" "$2" "cp"
+}
+
+function lnsafe {
+  opsafe "$1" "$2" "ln -s"
+}
+
+exe="Do_Smv2_Solver.exe"
+rundir="run_$(date +%s)"
+
+mkdir $rundir || fail
+
+cd $rundir
+
+cpsafe "../../src/$exe" "."
+cpsafe "../Diff.bash" "."
+
+for x in physproc smv2chem1 smv2chem2
+do
+  lnsafe "../../data/${x}_entry.proc0017" "."
+done
+lnsafe "../outFiles" "."
+
+$exe 2>&1 | tee output

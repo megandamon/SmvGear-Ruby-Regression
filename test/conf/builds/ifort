@@ -1,0 +1,3 @@
+extends: 'common'
+makefile_gearproc: 'GNUmakefile.ifort'
+makefile_top: 'GNUmakefile.ifort'

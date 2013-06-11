@@ -1,0 +1,156 @@
+# Logfile created on 2013-05-28 13:49:55 -0400 by logger.rb/v1.2.7
+2013-5-28 13:49:55 [INFO] 
+
+  ts: Running test suite 'smvgear'
+
+2013-5-28 13:49:55 [DEBUG] 
+
+  ts: Read config 'smvgear':
+  ts: group_gfortran: 
+  ts:   gfortran
+  ts: group_ifort: 
+  ts:   ifort
+
+2013-5-28 13:49:55 [DEBUG] 
+
+  ts: Read config 'gfortran':
+  ts: baseline: 'gfortran'
+  ts: build: 'gfortran'
+  ts: extends: 'common'
+
+2013-5-28 13:49:55 [DEBUG] 
+
+  ts: Read config 'common':
+  ts: profile: 'SMVgear'
+
+2013-5-28 13:49:55 [DEBUG] 
+
+  ts: Read config 'ifort':
+  ts: baseline: 'ifort'
+  ts: build: 'ifort'
+  ts: extends: 'common'
+
+2013-5-28 13:49:55 [DEBUG] 
+
+  ts: Read config 'common':
+  ts: profile: 'SMVgear'
+
+2013-5-28 13:49:55 [DEBUG] 
+
+  Created empty 'builds'
+
+2013-5-28 13:49:55 [DEBUG] 
+
+  Run ifort: Read config 'ifort':
+  Run ifort: baseline: 'ifort'
+  Run ifort: build: 'ifort'
+  Run ifort: extends: 'common'
+
+2013-5-28 13:49:55 [DEBUG] 
+
+  Run gfortran: Read config 'gfortran':
+  Run gfortran: baseline: 'gfortran'
+  Run gfortran: build: 'gfortran'
+  Run gfortran: extends: 'common'
+
+2013-5-28 13:49:55 [DEBUG] 
+
+  Run gfortran: Read config 'common':
+  Run gfortran: profile: 'SMVgear'
+
+2013-5-28 13:49:55 [DEBUG] 
+
+  Run ifort: Read config 'common':
+  Run ifort: profile: 'SMVgear'
+
+2013-5-28 13:49:55 [DEBUG] 
+
+  Run gfortran: Read config 'gfortran':
+  Run gfortran: extends: 'common'
+  Run gfortran: makefile_gearproc: 'GNUmakefile.gfortran'
+  Run gfortran: makefile_top: 'GNUmakefile.gfortran'
+
+2013-5-28 13:49:55 [DEBUG] 
+
+  Run ifort: Read config 'ifort':
+  Run ifort: extends: 'common'
+  Run ifort: makefile_gearproc: 'GNUmakefile.ifort'
+  Run ifort: makefile_top: 'GNUmakefile.ifort'
+
+2013-5-28 13:49:55 [DEBUG] 
+
+  Run gfortran: Read config 'common':
+  Run gfortran: bindir: 'bin'
+
+2013-5-28 13:49:55 [DEBUG] 
+
+  Run ifort: Read config 'common':
+  Run ifort: bindir: 'bin'
+
+2013-5-28 13:49:55 [INFO] 
+
+  Run gfortran: Build gfortran started
+
+2013-5-28 13:49:55 [INFO] 
+
+  Run ifort: Build ifort started
+
+2013-5-28 13:49:55 [DEBUG] 
+
+  Run ifort: * Output from build ifort prep:
+  Run ifort: Copied /Users/mrdamon/Desktop/SMVgear/src -> /Users/mrdamon/Desktop/SMVgear/test/builds/ifort
+  Run ifort: Linked top-level makefile: /Users/mrdamon/Desktop/SMVgear/test/builds/ifort/GNUmakefile -> GNUmakefile.ifort
+  Run ifort: Linked GearProc makefile: /Users/mrdamon/Desktop/SMVgear/test/builds/ifort/GearProc/GNUmakefile -> GNUmakefile.ifort
+
+2013-5-28 13:49:55 [DEBUG] 
+
+  Run gfortran: * Output from build gfortran prep:
+  Run gfortran: Copied /Users/mrdamon/Desktop/SMVgear/src -> /Users/mrdamon/Desktop/SMVgear/test/builds/gfortran
+  Run gfortran: Linked top-level makefile: /Users/mrdamon/Desktop/SMVgear/test/builds/gfortran/GNUmakefile -> GNUmakefile.gfortran
+  Run gfortran: Linked GearProc makefile: /Users/mrdamon/Desktop/SMVgear/test/builds/gfortran/GearProc/GNUmakefile -> GNUmakefile.gfortran
+
+2013-5-28 13:49:55 [DEBUG] 
+
+  Run gfortran: * Output from build gfortran:
+  Run gfortran: * Output from cd /Users/mrdamon/Desktop/SMVgear/test/builds/gfortran && make (status code=2):
+  Run gfortran: ---- 8< ----
+  Run gfortran: GNUmakefile:46: /scratch/pfunit.gfortran/include/pFUnit.makefile: No such file or directory
+  Run gfortran: make: *** No rule to make target `/scratch/pfunit.gfortran/include/pFUnit.makefile'.  Stop.
+  Run gfortran: ---- >8 ----
+
+2013-5-28 13:49:55 [DEBUG] 
+
+  Run ifort: * Output from build ifort:
+  Run ifort: * Output from cd /Users/mrdamon/Desktop/SMVgear/test/builds/ifort && make (status code=2):
+  Run ifort: ---- 8< ----
+  Run ifort: GNUmakefile:48: /scratch/pfunit.ifort/include/pFUnit.makefile: No such file or directory
+  Run ifort: make: *** No rule to make target `/scratch/pfunit.ifort/include/pFUnit.makefile'.  Stop.
+  Run ifort: ---- >8 ----
+
+2013-5-28 13:49:55 [FATAL] 
+
+  Run gfortran: Build failed, see log.1369763395
+
+2013-5-28 13:49:55 [FATAL] 
+
+  Run ifort: Build failed, see log.1369763395
+
+2013-5-28 13:50:5 [DEBUG] 
+
+  ts: 
+  ts: * Backtrace:
+  ts: ts.rb:117:in `die'
+  ts: ts.rb:139:in `ext'
+  ts: /Users/mrdamon/Desktop/SMVgear/test/library.rb:9:in `lib_build'
+  ts: ts.rb:489:in `build'
+  ts: org/jruby/ext/thread/Mutex.java:149:in `synchronize'
+  ts: ts.rb:482:in `build'
+  ts: ts.rb:385:in `initialize'
+  ts: org/jruby/ext/thread/Mutex.java:149:in `synchronize'
+  ts: ts.rb:377:in `initialize'
+  ts: ts.rb:336:in `initialize'
+
+2013-5-28 13:50:5 [INFO] 
+
+  ts: Test suite 'smvgear' FAILED
+
